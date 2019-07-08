@@ -4,8 +4,50 @@ C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(4,1): warn
 C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(18,15): warning C4013:  'screenheader' undefined; assuming extern returning int
 C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(21,11): warning C4013:  'mainscr' undefined; assuming extern returning int
 C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(23,11): warning C4013:  'descion' undefined; assuming extern returning int
-C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(56,6): warning C4101:  'reserved': unreferenced local variable
-C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(56,6): warning C4101: C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(44) : warning C4716: 'screenheader': must return a value
-C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(56,6): warning C4101: C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(51) : warning C4716: 'mainscr': must return a value
-C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(56,6): warning C4101: C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(487) : warning C4716: 'descion': must return a value
-  hotel managemenet.vcxproj -> C:\Users\hp\source\repos\hotel managemenet\Debug\hotel managemenet.exe
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(311,19): warning C4477:  'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int'
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(331,21): warning C4476:  'fprintf' : unknown type field character 'D' in format specifier
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(331,29): warning C4474:  'fprintf' : too many arguments passed for format string
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(331,29): message :  placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(339,19): warning C4477:  'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int'
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(359,21): warning C4476:  'fprintf' : unknown type field character 'D' in format specifier
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(359,29): warning C4474:  'fprintf' : too many arguments passed for format string
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(359,29): message :  placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(367,19): warning C4477:  'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int'
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(387,21): warning C4476:  'fprintf' : unknown type field character 'D' in format specifier
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(387,29): warning C4474:  'fprintf' : too many arguments passed for format string
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(387,29): message :  placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(405,19): warning C4477:  'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int'
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(425,21): warning C4476:  'fprintf' : unknown type field character 'D' in format specifier
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(425,29): warning C4474:  'fprintf' : too many arguments passed for format string
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(425,29): message :  placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(433,19): warning C4477:  'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int'
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(453,21): warning C4476:  'fprintf' : unknown type field character 'D' in format specifier
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(453,29): warning C4474:  'fprintf' : too many arguments passed for format string
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(453,29): message :  placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(461,19): warning C4477:  'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int'
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(481,21): warning C4476:  'fprintf' : unknown type field character 'D' in format specifier
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(481,29): warning C4474:  'fprintf' : too many arguments passed for format string
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(481,29): message :  placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(497,19): warning C4477:  'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int'
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(517,21): warning C4476:  'fprintf' : unknown type field character 'D' in format specifier
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(517,29): warning C4474:  'fprintf' : too many arguments passed for format string
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(517,29): message :  placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(525,19): warning C4477:  'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int'
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(545,21): warning C4476:  'fprintf' : unknown type field character 'D' in format specifier
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(545,29): warning C4474:  'fprintf' : too many arguments passed for format string
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(545,29): message :  placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(553,19): warning C4477:  'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int'
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(573,21): warning C4476:  'fprintf' : unknown type field character 'D' in format specifier
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(573,29): warning C4474:  'fprintf' : too many arguments passed for format string
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(573,29): message :  placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(581,19): warning C4477:  'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'int'
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(601,21): warning C4476:  'fprintf' : unknown type field character 'D' in format specifier
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(601,29): warning C4474:  'fprintf' : too many arguments passed for format string
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(601,29): message :  placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(59,6): warning C4101:  'reserved': unreferenced local variable
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(294,10): warning C4101:  'fileroom': unreferenced local variable
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(294,10): warning C4101: C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(44) : warning C4716: 'screenheader': must return a value
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(294,10): warning C4101: C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(53) : warning C4716: 'mainscr': must return a value
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(294,10): warning C4101: C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(907) : warning C4716: 'descion': must return a value
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(294,10): warning C4101: C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(311) : error C4700: uninitialized local variable 'ch' used
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(429,5): error MSB6006: "CL.exe" exited with code 2.

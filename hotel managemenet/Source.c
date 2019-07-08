@@ -52,9 +52,11 @@ int mainscr()
 int descion(int x)
 {
 	FILE* fptr = NULL;
+	FILE * read = NULL;
 	//errno_t err;
 	int reserved;
 	//errno_t err = fopen_s(&fptr,"C:\Users\hp\source\repos\hotel managemenet\Debug\room.txt" , "r");
+	read = fopen("room.txt","r");
 	fptr = fopen("room.txt","w");
 	int rooms[3];
 	int days,age,id, gender;
@@ -75,6 +77,7 @@ int descion(int x)
 			scanf_s("%d", &room_no);
 			if (room_no==1) 
 			{
+				//if () {}
 				printf("No of days he will stay\n");
 				scanf_s("%d", &days);
 				system("cls");
@@ -88,7 +91,7 @@ int descion(int x)
 				printf("ID:\n");
 				scanf_s("%d", &id);
 				printf("\n\nSuite SR#001 reserved of :%d days\nEnter any number to continue:", days);
-				fprintf(fptr, "SR 001\n ");
+				fprintf(fptr, "1\n ");
 			}
 			if (room_no == 2)
 			{
@@ -106,7 +109,7 @@ int descion(int x)
 				scanf_s("%d", &id);
 				printf("\n\nSuite SR#002 reserved of :%d days\nEnter any number to continue:", days);
 
-				fprintf(fptr, "SR 002\n ");
+				fprintf(fptr, "2\n ");
 				//fclose(fptr);
 			}
 			if (room_no == 3)
@@ -124,9 +127,7 @@ int descion(int x)
 				printf("ID:\n");
 				scanf_s("%d", &id);
 				printf("\n\nSuite SR#003 reserved of :%d days\nEnter any number to continue:", days);
-
-				fprintf(fptr, "SR 003\n ");
-				//fclose(fptr);
+				fprintf(fptr, "3\n ");
 			}
 			fclose(fptr);
 			int me;
@@ -156,7 +157,7 @@ int descion(int x)
 				scanf_s("%d", &id);
 				//system("cls");
 				printf("\n\nDouble DR#004 room reserved of :%d days\nEnter any number to continue:", days);
-				fprintf(fptr, "DR 004 \n");
+				fprintf(fptr, "4 \n");
 			}
 			if (room_no == 2)
 			{
@@ -174,7 +175,7 @@ int descion(int x)
 				scanf_s("%d", &id);
 				//system("cls");
 				printf("\n\nDouble DR#005 room reserved of :%d days\nEnter any number to continue:", days);
-				fprintf(fptr, "DR 005 \n");
+				fprintf(fptr, "5 \n");
 			}
 			if (room_no == 3)
 			{
@@ -192,7 +193,7 @@ int descion(int x)
 				scanf_s("%d", &id);
 				//system("cls");
 				printf("\n\nDouble DR#006 room reserved of :%d days\nEnter any number to continue:", days);
-				fprintf(fptr, "DR 006 \n");
+				fprintf(fptr, "6 \n");
 			}
 			fclose(fptr);
 			int me;
@@ -208,7 +209,7 @@ int descion(int x)
 			scanf_s("%d", &room_no);
 			if (room_no == 1)
 			{
-				fprintf(fptr, "S 007 \n");
+				fprintf(fptr, "7 \n");
 				printf("No of days he will stay\n");
 				scanf_s("%d", &days);
 				system("cls");
@@ -226,7 +227,7 @@ int descion(int x)
 			}
 			if (room_no == 2)
 			{
-				fprintf(fptr, "S 008 \n");
+				fprintf(fptr, "8 \n");
 				printf("No of days he will stay\n");
 				scanf_s("%d", &days);
 				system("cls");
@@ -244,7 +245,7 @@ int descion(int x)
 			}
 			if (room_no == 3)
 			{
-				fprintf(fptr, "S 009 \n");
+				fprintf(fptr, "9 \n");
 				printf("No of days he will stay\n");
 				scanf_s("%d", &days);
 				system("cls");
@@ -262,7 +263,7 @@ int descion(int x)
 			}
 			if (room_no == 4)
 			{
-				fprintf(fptr, "S 010 \n");
+				fprintf(fptr, "10 \n");
 				printf("No of days he will stay\n");
 				scanf_s("%d", &days);
 				system("cls");
@@ -288,58 +289,318 @@ int descion(int x)
 		int room;
 		system("cls");
 		screenheader();
+		int ch,fileroom;
+		//for (;;) {}
+		int i = 0;
+		
 		printf("Choose the room you want to cancel the booking\n\n 1: Suite room\n\n 2: Double room\n\n 3: Single room\n");
 		scanf_s("%d", &room);
-		if (room == 1) 
+		if (room == 1)
 		{
-			int cusid, reason;
-			printf("\nPlease enter customer ID for Cancelation:\n");
-			scanf_s("%d", &cusid);
-			printf("***********************************************************\n");
-			printf("\nPlease choose a reason for Cancelation:\n");
-			printf("\n1: Not a suitable room\n");
-			printf("\n2: Heigh rates\n");
-			printf("\n3: Mind changed\n");
-			printf("\n4: Others\n");
-			scanf_s("%d", &reason);
-			printf("\n\nSuite Room booking Cancelled\nEnter any number to continue:");
-			int me;
-			scanf_s("%d", &me);
-			rooms[0] = '0';
+			int room_no;
+			system("cls");
+			screenheader();
+			printf("Choose the room you want to cancel\n\n 1: SR 001\n\n 2: SR 002\n\n 3: SR 003\n");
+			scanf_s("%d", &room_no);
+			if (room_no == 1)
+			{
+				if ((read = fopen("room.txt", "r")) != NULL)
+				{
+					fscanf(read, "%d", ch);
+					if (ch == 1)
+					{
+						int cusid, reason;
+						printf("\nPlease enter customer ID for Cancelation:\n");
+						scanf_s("%d", &cusid);
+						printf("***********************************************************\n");
+						printf("\nPlease choose a reason for Cancelation:\n");
+						printf("\n1: Not a suitable room\n");
+						printf("\n2: Heigh rates\n");
+						printf("\n3: Mind changed\n");
+						printf("\n4: Others\n");
+						scanf_s("%d", &reason);
+						printf("\n\nSuite Room booking Cancelled\nEnter any number to continue:");
+						int me;
+						scanf_s("%d", &me);
+						rooms[0] = '0';
+					}
+					else
+					{
+						fprintf(fptr, "%D\n", ch);
+					}
+				}
+			}
+			else if (room_no==2)
+			{
+				if ((read = fopen("room.txt", "r")) != NULL)
+				{
+					fscanf(read, "%d", ch);
+					if (ch == 2)
+					{
+						int cusid, reason;
+						printf("\nPlease enter customer ID for Cancelation:\n");
+						scanf_s("%d", &cusid);
+						printf("***********************************************************\n");
+						printf("\nPlease choose a reason for Cancelation:\n");
+						printf("\n1: Not a suitable room\n");
+						printf("\n2: Heigh rates\n");
+						printf("\n3: Mind changed\n");
+						printf("\n4: Others\n");
+						scanf_s("%d", &reason);
+						printf("\n\nSuite Room booking Cancelled\nEnter any number to continue:");
+						int me;
+						scanf_s("%d", &me);
+						rooms[0] = '0';
+					}
+					else
+					{
+						fprintf(fptr, "%D\n", ch);
+					}
+				}
+			}
+			else if (room_no == 3)
+			{
+				if ((read = fopen("room.txt", "r")) != NULL)
+				{
+					fscanf(read, "%d", ch);
+					if (ch == 3)
+					{
+						int cusid, reason;
+						printf("\nPlease enter customer ID for Cancelation:\n");
+						scanf_s("%d", &cusid);
+						printf("***********************************************************\n");
+						printf("\nPlease choose a reason for Cancelation:\n");
+						printf("\n1: Not a suitable room\n");
+						printf("\n2: Heigh rates\n");
+						printf("\n3: Mind changed\n");
+						printf("\n4: Others\n");
+						scanf_s("%d", &reason);
+						printf("\n\nSuite Room booking Cancelled\nEnter any number to continue:");
+						int me;
+						scanf_s("%d", &me);
+						rooms[0] = '0';
+					}
+					else
+					{
+						fprintf(fptr, "%D\n", ch);
+					}
+				}
+			}
+			
+			
 		}
 		else if(room==2)
 		{
-			int cusid, reason;
-			printf("\nPlease enter customer ID for Cancelation:\n");
-			scanf_s("%d", &cusid);
-			printf("***********************************************************\n");
-			printf("\nPlease choose a reason for Cancelation:\n");
-			printf("\n1: Not a suitable room\n");
-			printf("\n2: Heigh rates\n");
-			printf("\n3: Mind changed\n");
-			printf("\n4: Others\n");
-			scanf_s("%d", &reason);
-			printf("\n\nDouble Room booking Cancelled\nEnter any number to continue:");
-			int me;
-			scanf_s("%d", &me);
-			rooms[1] = '0';
+			int room_no;
+			system("cls");
+			screenheader();
+			printf("Choose the room you want to cancel\n\n 1: DR 004\n\n 2: DR 005\n\n 3: DR 006\n");
+			scanf_s("%d", &room_no);
+			if (room_no == 1)
+			{
+				if ((read = fopen("room.txt", "r")) != NULL)
+				{
+					fscanf(read, "%d", ch);
+					if (ch == 4)
+					{
+						int cusid, reason;
+						printf("\nPlease enter customer ID for Cancelation:\n");
+						scanf_s("%d", &cusid);
+						printf("***********************************************************\n");
+						printf("\nPlease choose a reason for Cancelation:\n");
+						printf("\n1: Not a suitable room\n");
+						printf("\n2: Heigh rates\n");
+						printf("\n3: Mind changed\n");
+						printf("\n4: Others\n");
+						scanf_s("%d", &reason);
+						printf("\n\nDouble Room booking Cancelled\nEnter any number to continue:");
+						int me;
+						scanf_s("%d", &me);
+						rooms[1] = '0';
+					}
+					else
+					{
+						fprintf(fptr, "%D\n", ch);
+					}
+				}
+			}
+			else if (room_no == 2)
+			{
+				if ((read = fopen("room.txt", "r")) != NULL)
+				{
+					fscanf(read, "%d", ch);
+					if (ch == 5)
+					{
+						int cusid, reason;
+						printf("\nPlease enter customer ID for Cancelation:\n");
+						scanf_s("%d", &cusid);
+						printf("***********************************************************\n");
+						printf("\nPlease choose a reason for Cancelation:\n");
+						printf("\n1: Not a suitable room\n");
+						printf("\n2: Heigh rates\n");
+						printf("\n3: Mind changed\n");
+						printf("\n4: Others\n");
+						scanf_s("%d", &reason);
+						printf("\n\nDouble Room booking Cancelled\nEnter any number to continue:");
+						int me;
+						scanf_s("%d", &me);
+						rooms[1] = '0';
+					}
+					else
+					{
+						fprintf(fptr, "%D\n", ch);
+					}
+				}
+			}
+			else if (room_no == 3)
+			{
+				if ((read = fopen("room.txt", "r")) != NULL)
+				{
+					fscanf(read, "%d", ch);
+					if (ch == 6)
+					{
+						int cusid, reason;
+						printf("\nPlease enter customer ID for Cancelation:\n");
+						scanf_s("%d", &cusid);
+						printf("***********************************************************\n");
+						printf("\nPlease choose a reason for Cancelation:\n");
+						printf("\n1: Not a suitable room\n");
+						printf("\n2: Heigh rates\n");
+						printf("\n3: Mind changed\n");
+						printf("\n4: Others\n");
+						scanf_s("%d", &reason);
+						printf("\n\nDouble Room booking Cancelled\nEnter any number to continue:");
+						int me;
+						scanf_s("%d", &me);
+						rooms[1] = '0';
+					}
+					else
+					{
+						fprintf(fptr, "%D\n", ch);
+					}
+				}
+			}			
 		}
 		else if (room == 3)
 		{
-			int cusid, reason;
-			printf("\nPlease enter customer ID for Cancelation:\n");
-			scanf_s("%d", &cusid);
-			printf("***********************************************************\n");
-			printf("\nPlease choose a reason for Cancelation:\n");
-			printf("\n1: Not a suitable room\n");
-			printf("\n2: Heigh rates\n");
-			printf("\n3: Mind changed\n");
-			printf("\n4: Others\n");
-			scanf_s("%d", &reason);
-			printf("\n\nSingle Room booking Cancelled\nEnter any number to continue:");
-			int me;
-			scanf_s("%d", &me);
-			rooms[2] = '0';
+			int room_no;
+			system("cls");
+			screenheader();
+			printf("Choose the room you want to cancel\n\n 1: S 007\n\n 2: S 008\n\n 3: S 009\n\n 4: S 010");
+			scanf_s("%d", &room_no);
+			if (room_no == 1)
+			{
+				if ((read = fopen("room.txt", "r")) != NULL)
+				{
+					fscanf(read, "%d", ch);
+					if (ch == 7)
+					{
+						int cusid, reason;
+						printf("\nPlease enter customer ID for Cancelation:\n");
+						scanf_s("%d", &cusid);
+						printf("***********************************************************\n");
+						printf("\nPlease choose a reason for Cancelation:\n");
+						printf("\n1: Not a suitable room\n");
+						printf("\n2: Heigh rates\n");
+						printf("\n3: Mind changed\n");
+						printf("\n4: Others\n");
+						scanf_s("%d", &reason);
+						printf("\n\nSingle Room booking Cancelled\nEnter any number to continue:");
+						int me;
+						scanf_s("%d", &me);
+						rooms[2] = '0';
+					}
+					else
+					{
+						fprintf(fptr, "%D\n", ch);
+					}
+				}
+			}
+			else if (room_no == 2)
+			{
+				if ((read = fopen("room.txt", "r")) != NULL)
+				{
+					fscanf(read, "%d", ch);
+					if (ch == 8)
+					{
+						int cusid, reason;
+						printf("\nPlease enter customer ID for Cancelation:\n");
+						scanf_s("%d", &cusid);
+						printf("***********************************************************\n");
+						printf("\nPlease choose a reason for Cancelation:\n");
+						printf("\n1: Not a suitable room\n");
+						printf("\n2: Heigh rates\n");
+						printf("\n3: Mind changed\n");
+						printf("\n4: Others\n");
+						scanf_s("%d", &reason);
+						printf("\n\nSingle Room booking Cancelled\nEnter any number to continue:");
+						int me;
+						scanf_s("%d", &me);
+						rooms[2] = '0';
+					}
+					else
+					{
+						fprintf(fptr, "%D\n", ch);
+					}
+				}
+			}
+			else if (room_no == 3)
+			{
+				if ((read = fopen("room.txt", "r")) != NULL)
+				{
+					fscanf(read, "%d", ch);
+					if (ch == 9)
+					{
+						int cusid, reason;
+						printf("\nPlease enter customer ID for Cancelation:\n");
+						scanf_s("%d", &cusid);
+						printf("***********************************************************\n");
+						printf("\nPlease choose a reason for Cancelation:\n");
+						printf("\n1: Not a suitable room\n");
+						printf("\n2: Heigh rates\n");
+						printf("\n3: Mind changed\n");
+						printf("\n4: Others\n");
+						scanf_s("%d", &reason);
+						printf("\n\nSingle Room booking Cancelled\nEnter any number to continue:");
+						int me;
+						scanf_s("%d", &me);
+						rooms[2] = '0';
+					}
+					else
+					{
+						fprintf(fptr, "%D\n", ch);
+					}
+				}
+			}
+			else if (room_no == 4)
+			{
+				if ((read = fopen("room.txt", "r")) != NULL)
+				{
+					fscanf(read, "%d", ch);
+					if (ch == 10)
+					{
+						int cusid, reason;
+						printf("\nPlease enter customer ID for Cancelation:\n");
+						scanf_s("%d", &cusid);
+						printf("***********************************************************\n");
+						printf("\nPlease choose a reason for Cancelation:\n");
+						printf("\n1: Not a suitable room\n");
+						printf("\n2: Heigh rates\n");
+						printf("\n3: Mind changed\n");
+						printf("\n4: Others\n");
+						scanf_s("%d", &reason);
+						printf("\n\nSingle Room booking Cancelled\nEnter any number to continue:");
+						int me;
+						scanf_s("%d", &me);
+						rooms[2] = '0';
+					}
+					else
+					{
+						fprintf(fptr, "%D\n", ch);
+					}
+				}
+			}
+			
 		}
 	}
 	else if (x==3)
@@ -347,62 +608,219 @@ int descion(int x)
 		int room;
 		system("cls");
 		screenheader();
-		printf("Choose the room you want to modify the booking\n\n 1: Suite room\n\n 2: Double room\n\n 3: Single room\n");
+		printf("Choose the room you want to modify\n\n 1: Suite room\n\n 2: Double room\n\n 3: Single room\n");
 		scanf_s("%d", &room);
 		if (room == 1)
 		{
-			printf("No of days he will stay\n");
-			scanf_s("%d", &days);
+			int room_no;
 			system("cls");
 			screenheader();
-			printf("Full Name:\n");
-			if (scanf_s("%s", names, sizeof(names)) == 1);
-			printf("Age:\n");
-			scanf_s("%d", &age);
-			printf("Gender:\n1: Male\n2: Female\n");
-			scanf_s("%d", &gender);
-			printf("ID:\n");
-			scanf_s("%d", &id);
-			printf("Suite Room modified and reserved for :%d days\nEnter any number to continue:", days);
+			printf("Choose the room you want to modify\n\n 1: SR 001\n\n 2: SR 002\n\n 3: SR 003\n");
+			scanf_s("%d", &room_no);
+			if (room_no == 1)
+			{
+				//if () {}
+				printf("No of days he will stay\n");
+				scanf_s("%d", &days);
+				system("cls");
+				screenheader();
+				printf("Full Name:\n");
+				if (scanf_s("%s", names, sizeof(names)) == 1);
+				printf("Age:\n");
+				scanf_s("%d", &age);
+				printf("Gender:\n1: Male\n2: Female\n");
+				scanf_s("%d", &gender);
+				printf("ID:\n");
+				scanf_s("%d", &id);
+				printf("\n\nSuite SR#001 reserved of :%d days\nEnter any number to continue:", days);
+				fprintf(fptr, "1\n ");
+			}
+			if (room_no == 2)
+			{
+				printf("No of days he will stay\n");
+				scanf_s("%d", &days);
+				system("cls");
+				screenheader();
+				printf("Full Name:\n");
+				if (scanf_s("%s", names, sizeof(names)) == 1);
+				printf("Age:\n");
+				scanf_s("%d", &age);
+				printf("Gender:\n1: Male\n2: Female\n");
+				scanf_s("%d", &gender);
+				printf("ID:\n");
+				scanf_s("%d", &id);
+				printf("\n\nSuite SR#002 reserved of :%d days\nEnter any number to continue:", days);
+
+				fprintf(fptr, "2\n ");
+				//fclose(fptr);
+			}
+			if (room_no == 3)
+			{
+				printf("No of days he will stay\n");
+				scanf_s("%d", &days);
+				system("cls");
+				screenheader();
+				printf("Full Name:\n");
+				if (scanf_s("%s", names, sizeof(names)) == 1);
+				printf("Age:\n");
+				scanf_s("%d", &age);
+				printf("Gender:\n1: Male\n2: Female\n");
+				scanf_s("%d", &gender);
+				printf("ID:\n");
+				scanf_s("%d", &id);
+				printf("\n\nSuite SR#003 reserved of :%d days\nEnter any number to continue:", days);
+				fprintf(fptr, "3\n ");
+			}
+			fclose(fptr);
 			int me;
 			scanf_s("%d", &me);
 			rooms[0] = '1';
 		}
 		else if (room == 2)
 		{
-			printf("No of days he will stay\n");
-			scanf_s("%d", &days);
+			int room_no;
 			system("cls");
 			screenheader();
-			printf("Full Name:\n");
-			if (scanf_s("%s", names, sizeof(names)) == 1);
-			printf("Age:\n");
-			scanf_s("%d", &age);
-			printf("Gender:\n1: Male\n2: Female\n");
-			scanf_s("%d", &gender);
-			printf("ID:\n");
-			scanf_s("%d", &id);
-			printf("Double Room modified and reserved for :%d days\nEnter any number to continue:", days);
+			printf("Choose the room you want to modify\n\n 1: DR 004\n\n 2: DR 005\n\n 3: DR 006\n");
+			scanf_s("%d", &room_no);
+			if (room_no == 1)
+			{
+				printf("No of days he will stay\n");
+				scanf_s("%d", &days);
+				system("cls");
+				screenheader();
+				printf("Full Name:\n");
+				if (scanf_s("%s", names, sizeof(names)) == 1);
+				printf("Age:\n");
+				scanf_s("%d", &age);
+				printf("Gender:\n1: Male\n2: Female\n");
+				scanf_s("%d", &gender);
+				printf("ID:\n");
+				scanf_s("%d", &id);
+				//system("cls");
+				printf("\n\nDouble DR#004 room reserved of :%d days\nEnter any number to continue:", days);
+				fprintf(fptr, "4 \n");
+			}
+			if (room_no == 2)
+			{
+				printf("No of days he will stay\n");
+				scanf_s("%d", &days);
+				system("cls");
+				screenheader();
+				printf("Full Name:\n");
+				if (scanf_s("%s", names, sizeof(names)) == 1);
+				printf("Age:\n");
+				scanf_s("%d", &age);
+				printf("Gender:\n1: Male\n2: Female\n");
+				scanf_s("%d", &gender);
+				printf("ID:\n");
+				scanf_s("%d", &id);
+				//system("cls");
+				printf("\n\nDouble DR#005 room reserved of :%d days\nEnter any number to continue:", days);
+				fprintf(fptr, "5 \n");
+			}
+			if (room_no == 3)
+			{
+				printf("No of days he will stay\n");
+				scanf_s("%d", &days);
+				system("cls");
+				screenheader();
+				printf("Full Name:\n");
+				if (scanf_s("%s", names, sizeof(names)) == 1);
+				printf("Age:\n");
+				scanf_s("%d", &age);
+				printf("Gender:\n1: Male\n2: Female\n");
+				scanf_s("%d", &gender);
+				printf("ID:\n");
+				scanf_s("%d", &id);
+				//system("cls");
+				printf("\n\nDouble DR#006 room reserved of :%d days\nEnter any number to continue:", days);
+				fprintf(fptr, "6 \n");
+			}
+			fclose(fptr);
 			int me;
 			scanf_s("%d", &me);
 			rooms[1] = '1';
 		}
 		else if (room == 3)
 		{
-			printf("No of days he will stay\n");
-			scanf_s("%d", &days);
+			int room_no;
 			system("cls");
 			screenheader();
-			printf("Full Name:\n");
-			for (int i = 0;i < 10;i++)
-			if (scanf_s("%s", names, sizeof(names)) == 1);
-			printf("Age:\n");
-			scanf_s("%d", &age);
-			printf("Gender:\n1: Male\n2: Female\n");
-			scanf_s("%d", &gender);
-			printf("ID:\n");
-			scanf_s("%d", &id);
-			printf("Single Room modified and reserved for :%d days\nEnter any number to continue:", days);
+			printf("Choose the room you want to modify\n\n 1: S 007\n\n 2: S 008\n\n 3: S 009\n\n 4: S 010\n");
+			scanf_s("%d", &room_no);
+			if (room_no == 1)
+			{
+				fprintf(fptr, "7 \n");
+				printf("No of days he will stay\n");
+				scanf_s("%d", &days);
+				system("cls");
+				screenheader();
+				printf("Full Name:\n");
+				if (scanf_s("%s", names, sizeof(names)) == 1);
+				printf("Age:\n");
+				scanf_s("%d", &age);
+				printf("Gender:\n1: Male\n2: Female\n");
+				scanf_s("%d", &gender);
+				printf("ID:\n");
+				scanf_s("%d", &id);
+				//system("cls");
+				printf("\n\nSingle S#007 room reserved of :%d days\nEnter any number to continue:", days);
+			}
+			if (room_no == 2)
+			{
+				fprintf(fptr, "8 \n");
+				printf("No of days he will stay\n");
+				scanf_s("%d", &days);
+				system("cls");
+				screenheader();
+				printf("Full Name:\n");
+				if (scanf_s("%s", names, sizeof(names)) == 1);
+				printf("Age:\n");
+				scanf_s("%d", &age);
+				printf("Gender:\n1: Male\n2: Female\n");
+				scanf_s("%d", &gender);
+				printf("ID:\n");
+				scanf_s("%d", &id);
+				//system("cls");
+				printf("\n\nSingle S#008 room reserved of :%d days\nEnter any number to continue:", days);
+			}
+			if (room_no == 3)
+			{
+				fprintf(fptr, "9 \n");
+				printf("No of days he will stay\n");
+				scanf_s("%d", &days);
+				system("cls");
+				screenheader();
+				printf("Full Name:\n");
+				if (scanf_s("%s", names, sizeof(names)) == 1);
+				printf("Age:\n");
+				scanf_s("%d", &age);
+				printf("Gender:\n1: Male\n2: Female\n");
+				scanf_s("%d", &gender);
+				printf("ID:\n");
+				scanf_s("%d", &id);
+				//system("cls");
+				printf("\n\nSingle S#009 room reserved of :%d days\nEnter any number to continue:", days);
+			}
+			if (room_no == 4)
+			{
+				fprintf(fptr, "10 \n");
+				printf("No of days he will stay\n");
+				scanf_s("%d", &days);
+				system("cls");
+				screenheader();
+				printf("Full Name:\n");
+				if (scanf_s("%s", names, sizeof(names)) == 1);
+				printf("Age:\n");
+				scanf_s("%d", &age);
+				printf("Gender:\n1: Male\n2: Female\n");
+				scanf_s("%d", &gender);
+				printf("ID:\n");
+				scanf_s("%d", &id);
+				//system("cls");
+				printf("\n\nSingle S#010 room reserved of :%d days\nEnter any number to continue:", days);
+			}
 			int me;
 			scanf_s("%d", &me);
 			rooms[2] = '1';
