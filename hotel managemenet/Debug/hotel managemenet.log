@@ -1,0 +1,11 @@
+﻿  Source.c
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(4,1): warning C4005:  '_CRT_SECURE_NO_WARNINGS': macro redefinition
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(4,1): warning C4005: C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c: note: see previous definition of '_CRT_SECURE_NO_WARNINGS'
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(18,15): warning C4013:  'screenheader' undefined; assuming extern returning int
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(21,11): warning C4013:  'mainscr' undefined; assuming extern returning int
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(23,11): warning C4013:  'descion' undefined; assuming extern returning int
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(56,6): warning C4101:  'reserved': unreferenced local variable
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(56,6): warning C4101: C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(44) : warning C4716: 'screenheader': must return a value
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(56,6): warning C4101: C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(51) : warning C4716: 'mainscr': must return a value
+C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(56,6): warning C4101: C:\Users\hp\source\repos\hotel managemenet\hotel managemenet\Source.c(487) : warning C4716: 'descion': must return a value
+  hotel managemenet.vcxproj -> C:\Users\hp\source\repos\hotel managemenet\Debug\hotel managemenet.exe
